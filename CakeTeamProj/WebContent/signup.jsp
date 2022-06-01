@@ -28,7 +28,6 @@
 				<a href="./index.html"><img class="header-logo"
 					src="./image/무제-1.png" alt="헤더 로고"></a>
 				<ul class="header-list">
-					<!-- 우선 #으로 처리 !! 후에 재작업 요망 -->
 					<li class="list-item"><a href="./cake.html">Cake</a></li>
 					<li class="list-item"><a href="./customCake.html">Custom
 							Cake</a></li>

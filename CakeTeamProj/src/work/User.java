@@ -8,22 +8,26 @@ import java.util.ArrayList;
 import util.JdbcUtil;
 
 public class User {
-	public ArrayList<String> getMemberList() {
+//	로그인 #해보자고 !!!
+	public ArrayList<String> loginUser(String id, String pwd) {
 		ArrayList<String> list = new ArrayList<>();
 
 		// DB 연동
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT userid FROM member";
+		String sql = "SELECT * FROM login WHERE id = ? AND pwd = ?";
 
 		conn = JdbcUtil.getConnection();
 		try {
 			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			pstmt.setString(2, pwd);
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				list.add(rs.getString("userid"));
+				list.add(rs.getString("id"));
+				list.add(rs.getString("pwd"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -32,4 +36,6 @@ public class User {
 		}
 		return list;
 	}
+	
+	
 }

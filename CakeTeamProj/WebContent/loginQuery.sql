@@ -6,7 +6,7 @@ email varchar2(100),
 address varchar2(100),
 phoneNum int,
 birth date
-)
+);
 
 
 insert into login values('testID1', '123ab', 'Gain', 'testE1', 'Icheon', '01087370637', '051107');

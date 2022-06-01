@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="work.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -24,7 +26,6 @@
 				<a href="./index.html"><img class="header-logo"
 					src="./image/무제-1.png" alt="헤더 로고"></a>
 				<ul class="header-list">
-					<!-- 우선 #으로 처리 !! 후에 재작업 요망 -->
 					<li class="list-item"><a href="./cake.html">Cake</a></li>
 					<li class="list-item"><a href="./customCake.html">Custom
 							Cake</a></li>
@@ -43,6 +44,7 @@
 		</div>
 	</header>
 
+
     <div id="main">
         <div id="login">
             <div class="login-wrap">
@@ -56,10 +58,10 @@
                 
                 <div id="login-form">
                     <div class="login-form-wrap">
-                        <form class="log-form" action="" method="post">
+                        <form class="log-form" action="./SessionLogin" method="post">
                             <div class="user-form">
-                                <input type="text" name="userId" placeholder="ID">
-                                <input type="password" name="userPwd" placeholder="PASSWORD">
+                                <input type="text" name="id" placeholder="ID">
+                                <input type="password" name="pwd" placeholder="PASSWORD">
                                 <a class="forget" href="./search.html">아이디/비밀번호</a>
                             </div>
                             <input class="sign-btn" type="submit" value="Sign in">
