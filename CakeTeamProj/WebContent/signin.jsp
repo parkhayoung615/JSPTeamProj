@@ -19,26 +19,29 @@
 
 <body style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <header>
-        <div id="header">
-            <div class="header-wrap">
-                <a href="./index.html"><img class="header-logo" src="./image/무제-1.png" alt="헤더 로고"></a>
-                <ul class="header-list">
-                    <!-- 우선 #으로 처리 !! 후에 재작업 요망 -->
-                    <li class="list-item"><a href="#">Cake</a></li>
-                    <li class="list-item"><a href="#">Custom Cake</a></li>
-                    <li class="list-item"><a href="#">Same-day Pickup</a></li>
-                    <li class="list-item"><a href="#">Party</a></li>
-                    <li class="list-item"><a href="#">About Us</a></li>
-                </ul>
-                <ul class="login-list">
-                    <li class="signup"><a href="./Signup.html">Sign up</a></li>
-                    <li class="signin"><a href="./Signin.html"><i class="fa-solid fa-right-to-bracket"></i> Sign in</a>
-                    </li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+		<div id="header">
+			<div class="header-wrap">
+				<a href="./index.html"><img class="header-logo"
+					src="./image/무제-1.png" alt="헤더 로고"></a>
+				<ul class="header-list">
+					<!-- 우선 #으로 처리 !! 후에 재작업 요망 -->
+					<li class="list-item"><a href="./cake.html">Cake</a></li>
+					<li class="list-item"><a href="./customCake.html">Custom
+							Cake</a></li>
+					<li class="list-item"><a href="./sameday.html">Same-day
+							Pickup</a></li>
+					<li class="list-item"><a href="./party.html">Party</a></li>
+					<li class="list-item"><a href="./aboutUs.html">About Us</a></li>
+				</ul>
+				<ul class="login-list">
+					<li class="signup"><a href="./signup.jsp">Sign up</a></li>
+					<li class="signin"><a href="./signin.jsp"><i
+							class="fa-solid fa-right-to-bracket"></i> Sign in</a></li>
+					<li><i class="fa-solid fa-magnifying-glass"></i></li>
+				</ul>
+			</div>
+		</div>
+	</header>
 
     <div id="main">
         <div id="login">

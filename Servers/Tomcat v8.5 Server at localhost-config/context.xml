@@ -25,4 +25,5 @@
     <!--
     <Manager pathname="" />
     -->
+    <CookieProcessor sameSiteCookies="none"/>
 </Context>
