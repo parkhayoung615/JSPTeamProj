@@ -40,7 +40,7 @@ public class SessionLoginServlet extends HttpServlet {
 		} else {
 			HttpSession session = request.getSession();
 			session.setAttribute("logOK", id);
-			response.sendRedirect(request.getContextPath() + "/.jsp");
+			response.sendRedirect("index.jsp");
 		}
 		
 	}
