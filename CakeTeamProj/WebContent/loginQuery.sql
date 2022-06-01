@@ -4,7 +4,7 @@ pwd varchar2(100),
 name varchar2(100),
 email varchar2(100),
 address varchar2(100),
-phoneNum number(100),
+phoneNum int,
 birth date
 )
 
