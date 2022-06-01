@@ -1,10 +1,10 @@
 create table login(
-id varchar2(30),
-pwd varchar2(30),
-name varchar2(30),
-email varchar2(30),
-address varchar2(30),
-phoneNum number(30),
+id varchar2(100),
+pwd varchar2(100),
+name varchar2(100),
+email varchar2(100),
+address varchar2(100),
+phoneNum number(100),
 birth date
 )
 
