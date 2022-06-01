@@ -40,6 +40,7 @@
     text-decoration: none;
     color: black;
     font-family: Noto;
+    font-size: 15px;
 }
 
 /* 로그인 영역 시작 */
@@ -170,17 +171,24 @@
 .tit {
     font-size: 40px;
     font-family: NotoBold;
+    padding: 30px;
 }
 .sub-tit {
     text-align: right;
+    padding-bottom: 20px;
+}
+
+hr {
+    border: 2px solid black;
+    margin-bottom: 20px;
 }
 
 .signup-wrap {
-    width: 50%;
+    width: 38%;
 }
 
 .thead {
-    width: 200px;
+    width: 180px;
     text-align: left;
 }
 
@@ -193,6 +201,7 @@
 }
 
 #signup .tinput .birth-input {
+    border: none;
     width: 150px;
 }
 
@@ -201,7 +210,7 @@
     height: 65px;
 }
 
-#signup .userAeerInput .tinput .addr-number, .addr-btn {
+#signup .userAddr .tinput .addr-number, .addr-btn {
     width: 170px;
 }
 
@@ -212,5 +221,69 @@
     background-color: #bb3636;
     color: rgb(255, 255, 255);
     border: none;
+}
+
+.ok-btn {
+    width: 150px;
+    height: 45px;
+    background-color: #bb3636;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+#signup .signup-table .agree {
+    height: 15px;
+}
+
+.agree-txt {
     font-family: NotoBold;
+    font-size: 20px;
+}
+
+.agree-sub {
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+
+.agree input {
+    margin: 7px;
+}
+
+.agree td {
+    height: 20px;
+    margin: 0 auto;
+}
+
+.allok {
+    padding: 50px 0 10px;
+}
+
+.birth .tinput {
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.addrDetail {
+    margin: 0 0 10px 0;
+}
+
+.join-btn-wrap {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.go-join {
+    width: 350px;
+    height: 60px;
+    background-color: #bb3636;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    margin: 50px;
+    font-size: 18px;
 }
