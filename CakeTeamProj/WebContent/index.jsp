@@ -9,6 +9,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Magic Cake</title>
 <link rel="stylesheet" href="./css/style.css">
+<!-- 파비콘 설정 -->
+<link rel="icon" href="./image/ha.png">
 <link rel="stylesheet"
 	href="./css/fontawesome-free-6.1.1-web/css/all.min.css">
 <script src="./js/jquery-3.6.0.min.js"></script>
@@ -86,48 +88,59 @@
 
 
 	<!-- 팝업 영역 시작 -->
-	<section id="modal1">
-		<div class="popup-wrap">
-			<div class="open-popup">
-				<div id="popup-design">
-					<div class="pop-content">
+    <section id="modal1">
+        <div class="popup-wrap">
+            <div class="open-popup">
+                <div id="popup-design">
+                    <div class="pop-content">
 
-						<div class="pop-tit">
-							<h2 class="tit">디자인</h2>
-						</div>
+                        <div class="pop-tit">
+                            <h2 class="tit">디자인</h2>
+                        </div>
 
-						<div class="pop-wrap">
-							<h2>윤이나</h2>
-							<h2>조진호</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                        <div class="pop-wrap">
+                            <div class="pop-item">
+                                <img class="pop-img"  src="./image/in.png" alt="윤이나">
+                                <div class="balloon2">윤이나</div>
+                            </div>
+                            <div class="pop-item">
+                                <img class="pop-img"  src="./image/jin.png" alt="조진호">
+                                <div class="balloon2">조진호</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section id="modal2">
-		<div class="popup-wrap">
-			<div class="open-popup">
-				<div id="popup-devel">
-					<div class="pop-content">
+    <section id="modal2">
+        <div class="popup-wrap">
+            <div class="open-popup">
+                <div id="popup-devel">
+                    <div class="pop-content">
 
-						<div class="pop-tit">
-							<h2 class="tit">기능</h2>
-						</div>
+                        <div class="pop-tit">
+                            <h2 class="tit">기능</h2>
+                        </div>
 
-						<div class="pop-wrap">
-							<h2>김가인</h2>
-							<h2>
-								<i class="fa-solid fa-crown"></i>&nbsp;박하영
-							</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- 팝업 영역 끝 -->
+                        <div class="pop-wrap">
+                            <div class="pop-item">
+                                <img class="pop-img" src="./image/ga.png" alt="김가인">
+                                <div class="balloon2">김가인</div>
+                            </div>
+                            <div class="pop-item">
+                                <img class="pop-img"  src="./image/ha.png" alt="박하영">
+                                <div class="balloon2 ico">팀장 <i class="fa-solid fa-crown"></i></div>
+                                <div class="balloon2">박하영</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 팝업 영역 끝 -->
 </body>
 
 </html>

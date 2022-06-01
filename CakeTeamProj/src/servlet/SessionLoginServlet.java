@@ -30,7 +30,7 @@ public class SessionLoginServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		ArrayList<String> list = user.loginUser(id, pwd);
-		System.out.print(list);
+//		System.out.print(list);
 		
 		if (list.isEmpty()) {
 			out.print("<script>");
@@ -40,7 +40,7 @@ public class SessionLoginServlet extends HttpServlet {
 		} else {
 			HttpSession session = request.getSession();
 			session.setAttribute("logOK", id);
-			response.sendRedirect(request.getContextPath() + "/index.jsp");
+			response.sendRedirect(request.getContextPath() + "/.jsp");
 		}
 		
 	}

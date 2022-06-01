@@ -11,7 +11,7 @@
 <header>
 		<div id="header">
 			<div class="header-wrap">
-				<a href="./index.html"><img class="header-logo"
+				<a href="./index.jsp"><img class="header-logo"
 					src="./image/무제-1.png" alt="헤더 로고"></a>
 				<ul class="header-list">
 					<li class="list-item"><a href="./cake.html">Cake</a></li>
