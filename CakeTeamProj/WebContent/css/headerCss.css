@@ -1,0 +1,122 @@
+/* 공통 적용 사항 */
+@font-face {
+    font-family: Noto;
+    src: url(./Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
+@font-face {
+    font-family: NotoBold;
+    src: url(./Noto_Sans_KR/NotoSansKR-Bold.otf);
+}
+
+@font-face {
+    font-family: VisualTitleBold;
+    src: url(./nanum-square/NanumSquareOTF_acEB.otf);
+}
+
+@font-face {
+    font-family: VisualTitleLight;
+    src: url(./nanum-square/NanumSquareL.otf);
+}
+
+@font-face {
+    font-family: VisualTitleMedium;
+    src: url(./nanum-square/NanumSquareR.otf);
+}
+
+@font-face {
+    font-family: cute;
+    src: url(./Boldie\ Script.otf);
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: Noto;
+}
+
+/* 헤더 영역 시작 */
+header {
+    width: 100%;
+    position: fixed;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255); 
+    z-index: 10000;
+}
+
+.header-wrap {
+    width: 75%;
+    height: 60px;
+}
+
+.header-logo {
+    height: 40px;
+    object-fit: cover;
+}
+
+.login-list li {
+    margin-right: 30px;
+}
+
+.signup a {
+    width: 120px;
+    height: 30px;
+    padding: 8px;
+    border-radius: 10px;
+}
+.signin a, .signup a {
+    font-family: NotoBold;
+}
+
+.header-list .list-item {
+    margin-right: 60px;
+    display: block;
+}
+
+.header-list .list-item a:after {
+    display: block;
+    content: '';
+    border-bottom: solid 2px #bb3636;
+    margin-top: 2px;
+    transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+    transition: transform 250ms ease-in-out; /*변형 방식*/
+}
+
+.header-list .list-item a:hover:after {
+    transform: scaleX(1); /*a 속성에 hover시 기존 크기로*/
+}
+
+
+.header-list, .header-wrap, .login-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+/* 푸터 영역 시작 */
+footer {
+    z-index: -1;
+    font-family: VisualTitleLight;
+    background-color: #bb3636;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+}
+
+.copy p{
+    color: #FFF;
+    text-align: center;
+}
+/* 푸터 영역 끝 */
