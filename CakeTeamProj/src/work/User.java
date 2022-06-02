@@ -37,5 +37,7 @@ public class User {
 		return list;
 	}
 	
+	// 로그아웃 #해보자고
+	
 	
 }

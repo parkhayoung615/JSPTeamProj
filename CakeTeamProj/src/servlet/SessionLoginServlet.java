@@ -15,8 +15,7 @@ import work.User;
 
 @WebServlet("/SessionLogin")
 public class SessionLoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+	
     public SessionLoginServlet() {
         super();
     }
