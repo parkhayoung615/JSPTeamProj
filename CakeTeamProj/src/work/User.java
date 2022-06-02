@@ -16,7 +16,7 @@ public class User {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM login WHERE id = ? AND pwd = ?";
+		String sql = "SELECT * FROM login WHERE id = ? AND password = ?";
 
 		conn = JdbcUtil.getConnection();
 		try {
@@ -27,7 +27,7 @@ public class User {
 
 			while (rs.next()) {
 				list.add(rs.getString("id"));
-				list.add(rs.getString("pwd"));
+				list.add(rs.getString("password"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
