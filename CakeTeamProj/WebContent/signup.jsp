@@ -1,3 +1,7 @@
+<%@page import="work.User"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
@@ -26,7 +30,7 @@
 
 	<div id="main">
 		<div id="signup">
-			<form action="./join_ok.php" method="POST">
+			<form action="signupOk.jsp" method="POST">
 				<div class="signup-wrap">
 					<div class="signup-title">
 						<div class="tit">회원가입</div>
@@ -93,14 +97,14 @@
                                     });
                                 }
                             </script>
-                            
+
 							<tr class="userAddr">
 								<th class="thead" rowspan="3">주소<span class="star">*</span>
 								</th>
 								<td class="tinput"><input type="text" class="addr-number"
-									name="postcode" id="postcode" placeholder="우편번호" readonly />
-									<!-- 자바 스크립트 함수와 연결 -->
-									<button type="button" class="addr-btn" onclick="execDaumPostcode()">우편번호 찾기</button></td>
+									name="postcode" id="postcode" placeholder="우편번호" readonly /> <!-- 자바 스크립트 함수와 연결 -->
+									<button type="button" class="addr-btn"
+										onclick="execDaumPostcode()">우편번호 찾기</button></td>
 							</tr>
 							<tr>
 								<td class="tinput"><input type="text" class="addrContext"
@@ -116,10 +120,7 @@
 							<tr class="birth">
 								<th class="thead">생년월일</th>
 								<td class="tinput"><input class="birth-input" type="text"
-									placeholder="YYYY"> <span>/</span> <input
-									class="birth-input" type="text" placeholder="MM"> <span>/</span>
-									<input class="birth-input" type="text" placeholder="DD">
-								</td>
+									name="birth" placeholder="ex) 2005-11-07"></td>
 							</tr>
 							<!-- 이용약관 영역 -->
 							<tr class="agree all">
@@ -169,6 +170,8 @@
 	</div>
 
 	<%@ include file="./view/footer.jsp"%>
+
+
 </body>
 
 </html>

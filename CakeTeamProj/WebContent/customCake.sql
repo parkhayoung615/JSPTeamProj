@@ -1,10 +1,10 @@
 create table customCake(
-name varchar2(100),
-phoneNum int,
-address varchar2(100),
+name varchar2(100) not null,
+phoneNum int not null,
+address varchar2(100) not null,
 refund varchar2(100),
-cake varchar2(100),
-design varchar2(100),
+cake varchar2(100) not null,
+design varchar2(100) not null,
 need varchar2(200)
 )
 
