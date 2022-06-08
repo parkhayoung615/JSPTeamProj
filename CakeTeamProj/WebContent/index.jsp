@@ -17,12 +17,6 @@
 <script src="./js/jquery-3.6.0.min.js"></script>
 <script src="./js/main.js"></script>
 </head>
-<%
-String id = (String) session.getAttribute("logOK");
-System.out.println(id);
-System.out.println(session.getAttribute("ID"));
-%>
-
 <!--
     클래스&아이디명 모두 언더바(_) 말고 하이픈(-) 사용
     영역이 있으면 영역명-wrap 로 기본 윈도우 지정
@@ -49,10 +43,10 @@ System.out.println(session.getAttribute("ID"));
 
 				<%
 				// session 속성 (logOK)이 설정되어 있으면 "id 님", 그렇지 않으면 로그인
-
-				if (id != null) {
+				String id = (String)session.getAttribute("loginOK");
+				if(id != null) {
 				%>
-				<%=session.getAttribute("ID")%>님 <i class="fa-solid fa-location-dot"></i><i
+				<%=id%>님 <i class="fa-solid fa-location-dot"></i><i
 					class="fa-solid fa-heart"></i><i class="fa-solid fa-cart-shopping"></i>
 				<a href="./logout.jsp">로그아웃</a>
 				<%

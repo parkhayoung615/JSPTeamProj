@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
-<%
-String id = (String) session.getAttribute("logOK");
-System.out.println(id);
-System.out.println(session.getAttribute("ID"));
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,11 +28,12 @@ System.out.println(session.getAttribute("ID"));
 				<%
 				// session 속성 (logOK)이 설정되어 있으면 "id 님", 그렇지 않으면 로그인
 
-				if (id != null) {
+				String id = (String)session.getAttribute("loginOK");
+				if(id != null) {
 				%>
-				<%=session.getAttribute("ID")%>님 <i class="fa-solid fa-location-dot"></i><i
+				<%=id%>님 <i class="fa-solid fa-location-dot"></i><i
 					class="fa-solid fa-heart"></i><i class="fa-solid fa-cart-shopping"></i>
-				<a href="./logout.jsp">로그아웃</a>
+				<a href="/logout">로그아웃</a>
 				<%
 				} else {
 				%>
