@@ -6,16 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sign in</title>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
     <link rel="stylesheet" href="./css/sign.css">
-    <link rel="stylesheet" href="./css/headerCss.css">
-    <link rel="stylesheet" href="./css/fontawesome-free-6.1.1-web/css/all.min.css">
-    <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
 

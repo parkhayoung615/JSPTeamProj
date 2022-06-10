@@ -13,13 +13,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>회원가입</title>
 <link rel="stylesheet" href="./css/sign.css">
-<link rel="stylesheet" href="./css/headerCss.css">
-<link rel="stylesheet"
-	href="./css/fontawesome-free-6.1.1-web/css/all.min.css">
-<script src="./js/jquery-3.6.0.min.js"></script>
 <script src="./js/main.js"></script>
 
-<!--autoload=false 파라미터를 이용하여 자동으로 로딩되는 것을 막습니다.-->
+<!--autoload=false 파라미터를 이용하여 자동으로 로딩되는 것을 막습니다 -->
 <script
 	src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
 </head>
