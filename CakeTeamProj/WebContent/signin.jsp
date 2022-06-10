@@ -36,7 +36,7 @@
                 
                 <div id="login-form">
                     <div class="login-form-wrap">
-                        <form class="log-form" action="./SessionLogin" method="post">
+                        <form class="log-form" action="/login" method="post">
                             <div class="user-form">
                                 <input type="text" name="id" placeholder="ID">
                                 <input type="password" name="pwd" placeholder="PASSWORD">

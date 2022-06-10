@@ -10,33 +10,30 @@ import util.JdbcUtil;
 
 public class User {
 //	로그인 #해보자고 !!!
-	public ArrayList<String> loginUser(String id, String pwd) {
-		ArrayList<String> loginList = new ArrayList<>();
-
+	public boolean getMemeberPwd(String id, String pwd) {
 		// DB 연동
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "SELECT * FROM login WHERE id = ? AND password = ?";
-
-		conn = JdbcUtil.getConnection();
+		String sql = "SELECT password FROM login WHERE id=?";
+		boolean result = false;
+		
+		conn = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
-			pstmt.setString(2, pwd);
 			rs = pstmt.executeQuery();
-
-			while (rs.next()) {
-				loginList.add(rs.getString("id"));
-				loginList.add(rs.getString("password"));
-				loginList.add(rs.getString("password"));
+			
+			if(rs.next()) {
+				if(pwd.equals(rs.getString("userpwd")))
+					result = true;
 			}
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JdbcUtil.close(conn, pstmt, rs);
 		}
-		return loginList;
+		return result;
 	}
 	// 회원가입
 		public int insertUser(String id, String password, String passwordOK, String name, String email, String phone, String addr,

@@ -2,7 +2,6 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,36 +12,34 @@ import javax.servlet.http.HttpSession;
 
 import work.User;
 
-@WebServlet("/SessionLogin")
+@WebServlet("/login")
 public class SessionLoginServlet extends HttpServlet {
-	
+	private static final long serialVersionUID = 1L;
+       
     public SessionLoginServlet() {
         super();
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		response.setContentType("text/html; charset=utf-8");
+		response.setContentType("text/html; charset=UTF-8");
+		
+		String id, pwd;
+		boolean result = false;
 		PrintWriter out = response.getWriter();
 		
-		User user = new User();
-		String id = request.getParameter("id");
-		String pwd = request.getParameter("pwd");
-		ArrayList<String> list = user.loginUser(id, pwd);
-//		System.out.print(list);
+		id = request.getParameter("id");
+		pwd = request.getParameter("pwd");
 		
-		if (list.isEmpty()) {
-			out.print("<script>");
-			out.print("alert('로그인에 실패하였습니다.');");
-			out.print("history.go(-1);");
-			out.print("</script>");	
-		} else {
+		User dao = new User();
+		result = dao.getMemeberPwd(id, pwd);
+		
+		if(result) {
 			HttpSession session = request.getSession();
-			session.setAttribute("logOK", id);
-			response.sendRedirect("index.jsp");
-			System.out.println(id);
+			session.setAttribute("loginOK", id);
+			response.sendRedirect("/login/login.jsp");
+		} else {
+			out.println("<script> alert('로그인에 실패하였습니다.'); history.back(); </script>");
 		}
-		
 	}
 
 }
