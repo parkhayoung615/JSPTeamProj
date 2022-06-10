@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="./css/headerCss.css">
 <script src="./js/jquery-3.6.0.min.js"></script>
 <!-- 파비콘 설정 -->
-<link rel="icon" href="./image/ha.png">
+<link rel="icon" href="./image/ha2.png">
 <link rel="stylesheet" href="./css/fontawesome-free-6.1.1-web/css/all.min.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
 				<ul class="login-list">
 					<li calss="name"><%=id%>님</li>
 					<li class="user"><a href="./myPage.jsp">My Page</a></li>
-					<li class="signup"><a class="logout" href="./logout.jsp">Logout</a></li>
+					<li class="signup"><a class="logout" href="/logout">Logout</a></li>
 				</ul>
 				<%
 				} else {
