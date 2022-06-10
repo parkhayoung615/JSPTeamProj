@@ -25,7 +25,7 @@ public class User {
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				if(pwd.equals(rs.getString("userpwd")))
+				if(pwd.equals(rs.getString("password")))
 					result = true;
 			}
 		} catch (SQLException e) {

@@ -36,7 +36,7 @@ public class SessionLoginServlet extends HttpServlet {
 		if(result) {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginOK", id);
-			response.sendRedirect("/login/login.jsp");
+			response.sendRedirect("index.jsp");
 		} else {
 			out.println("<script> alert('로그인에 실패하였습니다.'); history.back(); </script>");
 		}
