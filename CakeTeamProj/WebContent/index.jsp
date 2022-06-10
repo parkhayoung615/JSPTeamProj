@@ -360,7 +360,7 @@
                                 <h2 class="balloon2">윤이나</h2>
                             </div>
                             <div class="pop-item">
-                                <img src="./image/ha.png" alt="개자이너" class="pop-img">
+                                <img src="./image/ha2.png" alt="개자이너" class="pop-img">
                                 <h2 class="balloon2">박하영</h2>
                             </div>
                         </div>
@@ -385,7 +385,7 @@
                                 <h2 class="balloon2">김가인</h2>
                             </div>
                             <div class="pop-item">
-                                <img src="./image/ha.png" alt="개자이너" class="pop-img">
+                                <img src="./image/ha1.png" alt="개자이너" class="pop-img">
                                 <h2 class="balloon2">박하영</h2>
                             </div>
                         </div>
