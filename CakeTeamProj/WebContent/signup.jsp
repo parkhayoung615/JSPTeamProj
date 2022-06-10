@@ -50,7 +50,7 @@
 								<th class="thead">아이디<span class="star">*</span></th>
 								<td class="tinput"><input type="text" name="userid"
 									placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
-									<button class="ok-btn">중복 확인</button></td>
+									<button class="ok-btn" name="ok-btn">중복 확인</button></td>
 							</tr>
 							<!-- 비밀번호 영역 -->
 							<tr class="userPwd">
@@ -122,43 +122,7 @@
 								<td class="tinput"><input class="birth-input" type="text"
 									name="birth" placeholder="ex) 2005-11-07"></td>
 							</tr>
-							<!-- 이용약관 영역 -->
-							<tr class="agree all">
-								<th class="thead" rowspan="5">이용약관동의<span class="star">*</span></th>
-								<td class="allok"><input type="radio" name="allcheck">
-									<label for="allcheck"> <span class="agree-txt">전체
-											동의합니다.</span>
-										<p class="agree-sub">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를
-											이용할 수 있습니다.</p>
-								</label></td>
-							</tr>
-							<tr class="agree terms">
-								<td class="terms"><input type="radio" name="termsCheck">
-									<label for="termsCheck"> <span class="terms-txt txt">이용약관
-											동의<span class="imp"> (필수)</span>
-									</span> <a href="#">약관보기<i class="fas fa-chevron-right"></i></a>
-								</label></td>
-							</tr>
-							<tr class="agree choice">
-								<td class="choice"><input type="radio" name="choiceCheck">
-									<label for="choiceCheck"> <span class="choice-txt txt">개인정보
-											수집·이용 동의<span class="imp"> (선택)</span>
-									</span> <a href="#">약관보기<i class="fas fa-chevron-right"></i></a>
-								</label></td>
-							</tr>
-							<tr class="agree bene">
-								<td class="Benefit"><input type="radio" name="bencheck">
-									<label for="bencheck"> <span class="ben-tit txt">무료배송,
-											할인쿠폰 등 혜택/정보 수신 동의<span class="imp">(선택)</span>
-									</span>
-								</label></td>
-							<tr class="agree beneInput">
-								<td class="ben-input"><input type="radio" name="SMS">
-									<label for="SMS"> <span class="ben-txt txt">SMS</span>
-								</label> <input type="radio" name="benEmail"> <label
-									for="benEmail"> <span class="ben-txt txt">이메일</span>
-								</label></td>
-							</tr>
+							
 						</tbody>
 					</table>
 					<div class="join-btn-wrap">
