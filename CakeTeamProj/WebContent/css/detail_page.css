@@ -1,0 +1,233 @@
+/* 공통 적용 사항 */
+@font-face {
+    font-family: Noto;
+    src: url(./Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
+@font-face {
+    font-family: NotoBold;
+    src: url(./Noto_Sans_KR/NotoSansKR-Bold.otf);
+}
+
+@font-face {
+    font-family: VisualTitleBold;
+    src: url(./nanum-square/NanumSquareOTF_acEB.otf);
+}
+
+@font-face {
+    font-family: VisualTitleLight;
+    src: url(./nanum-square/NanumSquareL.otf);
+}
+
+@font-face {
+    font-family: VisualTitleMedium;
+    src: url(./nanum-square/NanumSquareR.otf);
+}
+
+@font-face {
+    font-family: cute;
+    src: url(./Boldie\ Script.otf);
+}
+
+@font-face {
+    font-family: ProdText;
+    src: url(./Oswald/Oswald-Bold.ttf);
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: Noto;
+}
+
+/* 상세페이지 영역 시작 */
+
+#cake-Product {
+    padding-top: 50px;
+}
+
+.cake-Product-wrap {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle {
+    z-index: 0;
+    position: absolute;
+    top: 8%;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    background-color:  rgb(202, 29, 73);
+}
+
+.cake-img {
+    z-index: 1;
+    height: 750px;
+}
+
+.cake-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-img {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.main-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -150px;
+}
+
+.cake-item {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(130%) grayscale(100%);
+    transition: all 0.3s;
+}
+
+img.cake-item:hover {
+    filter: none;
+}
+
+.product-tit {
+    text-align: left;
+}
+
+.main-tit {
+    padding-top: 30px;
+    font-family: VisualTitleBold;
+    font-size: 70px;
+    color: rgb(36, 36, 36);
+    padding-bottom: 30px;
+}
+
+.sub-tit {
+    color:  rgb(202, 29, 73);
+    font-family: VisualTitleBold;
+    font-size: 40px;
+}
+
+/* 옵션 선택 박스 */
+
+.tit {
+    font-family: VisualTitleMedium;
+    font-size: 20px;
+}
+
+.option-box {
+    text-align: left;
+}
+
+.product-option {
+    margin-top: 50px;
+}
+
+.option-text {
+    padding-bottom: 10px;
+}
+
+.option {
+    padding-bottom: 40px;
+}
+
+.option input {
+    padding: 10px;
+    background-color: rgba(202, 29, 72, 0);
+}
+
+.option .lettering {
+    width: 500px;
+    border: none;
+    border-bottom: 2px solid  rgb(202, 29, 73);
+}
+
+.etc {
+    border: none;
+    border-bottom: 2px solid  rgb(202, 29, 73);
+    width: 500px;
+    height: 60px;
+    padding-left: 10px;
+    padding-top: 3px;
+    background-color: rgba(202, 29, 72, 0);
+}
+
+.option-ok {
+    font-family: VisualTitleMedium;
+    background-color:  rgb(202, 29, 73);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 500px;
+    height: 50px;
+    font-size: 15px;
+}
+
+.item {
+    border-radius: 100%;
+    filter: blur(0.5px) grayscale(100%);
+    transition: 0.5s;
+}
+
+.item:hover {
+    filter: none;
+}
+
+
+/* 디테일 영역 시작 */
+
+#detail {
+    width: 70%;
+    height: 200px;
+    padding-top: 50px;
+}
+
+.detail-tit {
+    font-family: VisualTitleMedium;
+    font-size: 30px;
+}
+
+
+
+
+
+
+/* 푸터 영역 시작 */
+/* 푸터를 최하단에 넣기 위한 html 코드 */
+html, body {
+    position: relative;
+       min-height: 100%;
+}
+
+footer {
+   z-index: -1;
+   font-family: VisualTitleMedium;
+   background-color:  rgb(202, 29, 73);
+   width: 100%;
+   height: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.copy p{
+   color: #FFF;
+   text-align: center;
+}
+/* 푸터 영역 끝 */
+

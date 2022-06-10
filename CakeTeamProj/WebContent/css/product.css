@@ -1,0 +1,257 @@
+/* 공통 적용 사항 */
+@font-face {
+    font-family: Noto;
+    src: url(./Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+
+@font-face {
+    font-family: NotoBold;
+    src: url(./Noto_Sans_KR/NotoSansKR-Bold.otf);
+}
+
+@font-face {
+    font-family: VisualTitleBold;
+    src: url(./nanum-square/NanumSquareOTF_acEB.otf);
+}
+
+@font-face {
+    font-family: VisualTitleLight;
+    src: url(./nanum-square/NanumSquareL.otf);
+}
+
+@font-face {
+    font-family: VisualTitleMedium;
+    src: url(./nanum-square/NanumSquareR.otf);
+}
+
+@font-face {
+    font-family: cute;
+    src: url(./Boldie\ Script.otf);
+}
+
+@font-face {
+    font-family: ProntTxt;
+    src: url(./Oswald/Oswald-Bold.ttf);
+}
+
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: Noto;
+}
+
+
+
+/* 모든 상품 페이지 영역 시작 */
+#allProd {
+    display: flex;
+}
+
+/* 사이드바 시작 */
+
+#sidebar {
+    z-index: -1;
+    width: 20%;
+    position: fixed;
+    left: 0;
+    box-shadow: 10px 40px 10px 5px rgb(245, 245, 245);
+    height: 100%;
+}
+
+.sidebar-list-item {
+    padding: 5px;
+}
+
+.sidebar-list > .tit {
+    font-family: NotoBold;
+    padding: 20px;
+    text-align: left;
+}
+
+.sidebar-list-item a {
+    position: relative;
+    font-size: 16px;
+}
+
+.sidebar-list-item a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: rgba(255, 196, 0, 0.4);
+    transition: width .3s;
+}
+
+.sidebar-list-item a:hover:after {
+    width: 100%;
+}
+
+.sidebar-list {
+    margin: 50px;
+}
+
+
+/* 메인 영역 상품 시작 */
+
+#main {
+    padding-top: 80px;
+    width: 100%;
+}
+
+#product {
+    width: 50%;
+}
+
+.tit {
+    font-family: NotoBold;
+    padding-left: 50px;
+    font-size: 35px;
+}
+
+.all-product-item {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 20px;
+    width: 280px;
+    height: 350px;
+    box-shadow: 0px 0px 10px 5px rgb(245, 245, 245);
+}
+
+.all-product-item {
+    cursor: pointer;
+}
+
+.item-img {
+    width: 260px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.item-txt {
+    text-align: center;
+}
+
+.all-product-row {
+    display: flex;
+}
+
+.product-name {
+    font-size: 20px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-tag {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: rgb(116, 116, 116);
+}
+
+.product-cell {
+    font-family: NotoBold;
+    color: #bb3636;
+    font-size: 18px;
+}
+
+.all-product-tit {
+    padding: 20px 0 0 10px;
+}
+
+/* 비주얼 영역 시작 */
+
+
+#visual {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.visual-wrap {
+    position: relative;
+    z-index: 2;
+    width: 1500px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-right: 10%;
+}
+
+.visual-window {
+    z-index: 2;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    animation: slide 9s infinite;
+    width: 300%;
+    border-radius: 20px;
+}
+
+.visual-window .slide-item {
+    background-size: cover;
+}
+
+.slide-img {
+    object-fit: cover;
+    width: 1500px;
+    height: 400px;
+}
+
+@keyframes slide {
+    0% {margin-left:0;}
+    20% {margin-left:0;}
+    33% {margin-left:-100%;}
+    50% {margin-left:-100%;}
+    66% {margin-left:-200%;}
+    80% {margin-left:-200%;}
+    99% {margin-left:0;}
+    100% {margin-left:0;}
+}
+
+/* 사이드바 시작 */
+
+#category {
+    display: flex;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#category-sidebar {
+    position: absolute;
+    left: 10%;
+    width: 3%;
+    top: 44%;
+}
+
+.category-sidebar-list-item {
+    padding: 18px;
+    width: 200px;
+    height: 60px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 20px;
+    text-align: left;
+}
+.category-sidebar-list-item a {
+    position: relative;
+    font-size: 16px;
+}
+
+.category-sidebar-list-item:hover {
+    background-color: rgb(255, 196, 0);
+}
+.category-sidebar-list {
+    margin: 10px;
+}

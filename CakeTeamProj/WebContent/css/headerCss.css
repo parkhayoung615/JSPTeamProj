@@ -99,6 +99,11 @@ header {
 
 
 
+
+
+
+
+
 /* 푸터 영역 시작 */
 /* 푸터를 최하단에 넣기 위한 html 코드 */
 html, body {
@@ -108,11 +113,13 @@ html, body {
 
 footer {
     z-index: -1;
-    font-family: VisualTitleLight;
+    font-family: VisualTitleMedium;
     background-color: #bb3636;
     width: 100%;
     height: 150px;
-    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .copy p{
     color: #FFF;
