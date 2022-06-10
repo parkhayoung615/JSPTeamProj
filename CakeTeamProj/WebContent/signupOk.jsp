@@ -28,9 +28,10 @@
 		n = user.insertUser(id, password, passwordOK, name, email, phone, addr, m_addr, d_addr, birth);
 		if (n > 0)
 			response.sendRedirect("index.jsp");
+			
 	} else
 		out.println("<script>alert('조건을 확인하세요');</script>");
-	out.print("<script> history.back() </script>");
+		out.print("<script> history.back() </script>");
 	%>
 </body>
 </html>

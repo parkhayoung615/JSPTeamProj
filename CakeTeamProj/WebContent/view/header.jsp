@@ -32,9 +32,11 @@
 				String id = (String)session.getAttribute("loginOK");
 				if(id != null) {
 				%>
-				<%=id%>님 <i class="fa-solid fa-location-dot"></i>
-				<i class="fa-solid fa-heart"></i><i class="fa-solid fa-cart-shopping"></i>
-				<a href="./logout.jsp">로그아웃</a>
+				<ul class="login-list">
+					<li calss="name"><%=id%>님</li>
+					<li class="user"><a href="./myPage.jsp">My Page</a></li>
+					<li class="signup"><a class="logout" href="./logout.jsp">Logout</a></li>
+				</ul>
 				<%
 				} else {
 				%>
