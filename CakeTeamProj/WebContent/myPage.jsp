@@ -51,7 +51,7 @@
                             <h2 class="main-tit">Hello<br>World!</h2>
                         </div>
                         <div class="mypage-circle">
-                            <img src="./image/ha.png" alt="프로필 사진" class="mypage-img">
+                            <img src="./image/ga.png" alt="프로필 사진" class="mypage-img">
                             <img src="./image/ha1.png" alt="profile-img" class="profile-circle">
                         </div>
                     </div>
