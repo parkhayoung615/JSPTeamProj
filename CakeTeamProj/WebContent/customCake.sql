@@ -1,16 +1,16 @@
 create table customCake(
 name varchar2(100) not null,
-phoneNum int not null,
-address varchar2(100) not null,
-refund varchar2(100),
-cake varchar2(100) not null,
-design varchar2(100) not null,
-need varchar2(200)
+refund varchar2(100) not null,
+sell varchar2(100) not null,
+taste varchar2(100) not null,
+color varchar2(100) not null,
+text varchar2(200),
+want varchar2(200)
 )
 
 
-insert into customCake values('gain', 010, 'Ichean', 'test352', 'a', 'design1', 'test1');
-insert into customCake values('gain2', 011, 'Seaul', 'test123', 'b', 'design2', 'test2');
+insert into customCake values('gain', '1', 'test', 'test1', 'red', 'test1', 'test1');
+insert into customCake values('gain2', '2', 'test2', 'test2', 'pink', 'text2', 'text2');
 
 
 select * from customCake;
