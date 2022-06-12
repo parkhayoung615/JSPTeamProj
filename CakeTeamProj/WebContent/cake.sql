@@ -12,3 +12,16 @@ insert into cake values('cake', 'gain2', '2', 'test2', 'test2', 'pink', 'text2',
 
 
 select * from cake;
+
+-- 케이크 정보에 쓰이는 테이블
+CREATE TABLE cakeinfor(
+id number not null PRIMARY KEY,
+cake varchar2(100) not null,
+name varchar2(100) not null,
+cell NUMBER not null
+);
+
+insert into cakeinfor values(1, 'cake', 'Music is My Life...', 17000);
+insert into cakeinfor values(2, 'customcake', 'Happy Birth Day Chochlate Cake', 17000);
+
+drop table cakeinfor;
