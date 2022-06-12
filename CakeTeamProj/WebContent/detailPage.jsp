@@ -15,7 +15,7 @@
     <%@ include file="./view/header.jsp"%>
 
 
-    <div id="main">
+   <div id="main">
         <div id="cake-Product">
         <form action="orderOK.jsp" method="POST">
             <div class="cake-Product-wrap">
@@ -38,15 +38,16 @@
                                 </p>
                     </div>
                     <div class="product-option">
-                        <form action="orderOK.jsp" method="post">
                             <div class="option-box">
                                 <div class="option taste">
                                     <div class="option-text">
                                         <p class="tit">맛 선택</p>
                                     </div>
                                     <div class="option-input">
-                                        <input name="taste" class="item" type="image" src="./image/choco.jpg" alt="초코 맛" value="choco" >
-                                        <input name="taste" class="item" type="image" src="./image/tramisu.jpg" alt="티라미수 맛" value="tramisu">
+                                        <label class="item" for="choco"><img src="./image/choco.jpg" alt="초코맛" style="border-radius: 100%;"></label>
+                                        <input class="item" type="radio" name="taste" alt="초코 맛" value="choco" id="choco" checked="checked">
+                                        <label class="item" for="tiramisu"><img src="./image/tramisu.jpg" alt="티라미수맛" style="border-radius: 100%;"></label>
+                                        <input class="item" type="radio" name="taste" alt="티라미수 맛" value="tramisu" id="tiramisu">
                                     </div>
                                 </div>
 
@@ -55,11 +56,16 @@
                                         <p class="tit">케이크 색상</p>
                                     </div>
                                     <div class="option-input">
-                                        <input name="color" class="item" type="image" src="./image/color1.jpg" alt="케이크 색상" value="white">
-                                        <input name="color" class="item" type="image" src="./image/color2.png" alt="케이크 색상" value="pink">
-                                        <input name="color" class="item" type="image" src="./image/color3.png" alt="케이크 색상" value="yellow">
-                                        <input name="color" class="item" type="image" src="./image/color4.png" alt="케이크 색상" value="mint">
-                                        <input name="color" class="item" type="image" src="./image/color5.png" alt="케이크 색상" value="blue">
+                                        <label class="item" for="whtie"><img src="./image/color1.jpg" alt="흰색" style="border-radius: 100%;"></label>
+                                        <input class="item" name="color" type="radio" alt="케이크 색상" value="white" id="white" checked="checked">
+                                        <label class="item" for="pink"><img src="./image/color2.png" alt="분홍색" style="border-radius: 100%;"></label>
+                                        <input class="item" name="color" type="radio" alt="케이크 색상" value="pink" id="pink">
+                                        <label class="item" for="yellow"><img src="./image/color3.png" alt="노란색" style="border-radius: 100%;"></label>
+                                        <input class="item" name="color" type="radio" alt="케이크 색상" value="yellow" id="yellow">
+                                        <label class="item" for="mint"><img src="./image/color4.png" alt="민트색" style="border-radius: 100%;"></label>
+                                        <input class="item" name="color" type="radio" alt="케이크 색상" value="mint" id="mint">
+                                        <label class="item" for="blue"><img src="./image/color5.png" alt="파란색" style="border-radius: 100%;"></label>
+                                        <input class="item" name="color" type="radio" alt="케이크 색상" value="blue" id="blue">
                                     </div>
                                 </div>
                                 <div class="option">
@@ -78,10 +84,9 @@
                                         <textarea name="want" class="etc" name="etc" id="etc" placeholder="케이크, 판 문구수 추가 요청은 반영되지 않으며, 옵션에서 선택한 것과 다르게 요청 사항 기입시 옵션 선택 기준으로 제작됩니다."></textarea>
                                     </div>
                                 </div>
-                                
                                 <input type="submit" class="option-ok" value="옵션 선택 완료">
                             </div>
-                        </form>
+                       
                     </div>
                 </div>
             </div>

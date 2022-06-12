@@ -33,6 +33,7 @@
                     </div>
                     <div class="all-product">
                         <div class="all-product-wrap">
+                        
                             <div class="all-product-row">
                                 <a class="linke" href="./detailPage.jsp">
                                     <div class="all-product-item">

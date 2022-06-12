@@ -46,6 +46,10 @@
 
 /* 상세페이지 영역 시작 */
 
+.text-box {
+    margin-left: 5%;
+}
+
 #cake-Product {
     padding-top: 50px;
 }
@@ -179,16 +183,6 @@ img.cake-item:hover {
     font-size: 15px;
 }
 
-.item {
-    border-radius: 100%;
-    filter: blur(0.5px) grayscale(100%);
-    transition: 0.5s;
-}
-
-.item:hover {
-    filter: none;
-}
-
 
 /* 디테일 영역 시작 */
 
@@ -203,9 +197,30 @@ img.cake-item:hover {
     font-size: 30px;
 }
 
+[type="radio"] {
+    display: none;
+}
 
+[name="taste"] {
+    border-radius: 100%;
+    filter: blur(0.5px) grayscale(100%);
+    transition: 0.5s;
+}
 
+label {
+    border-radius: 100%;
+    margin: 8px;
+}
 
+.item {
+    border-radius: 100%;
+    filter: blur(0.5px) grayscale(100%);
+    transition: 0.5s;
+}
+
+.item:hover {
+    filter: none;
+}
 
 
 /* 푸터 영역 시작 */
