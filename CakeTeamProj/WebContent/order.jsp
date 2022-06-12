@@ -62,9 +62,8 @@
                                 <div class="tit">주문자 정보</div>
                             </div>
                             <div class="user-infor">
-                                <div class="user">보내는 분 : 박하영</div>
-                                <div class="phone">휴대폰 : 01031236181</div>
-                                <div class="email">이메일 : parkhayoung615@gmail.com</div>
+                                <div class="user">name</div>
+                                <div class="phone">refund</div>
                             </div>
                         </div>
                     </div>
@@ -76,23 +75,23 @@
                             </div>
                             <div class="post-infor">
                                 <div class="post-main">
-                                    <div class="sub">배송지 : 블라블라씨발나도놀고싶다</div>
+                                    <div class="sub">cake</div>
                                 </div>
-                                <div class="post-sub">
-                                    <div class="sub">상세정보 : 블라블라여기에는상세주소이런거넣지않을까아웅나도몰라ㅗㅗ</div>
+                                <div class="post-sub2">
+                                    <div class="sub2">cake</div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="order-sell">
-                        <div class="sell-wrap">
-                            <div class="sell-tit">
-                                <div class="tit">결제 금액</div>
-                            </div>
-                            <div class="sell-infor">
-                                <div class="sell-main">주문 금액 : 1억 썅롬아</div>
-                                <div class="sell-post">배송비 : 3,000원 아니그냥죽을게</div>
+                                <div class="post-sub3">
+                                    <div class="sub3">taste</div>
+                                </div>
+                                <div class="post-sub4">
+                                    <div class="sub4">color</div>
+                                </div>
+                                <div class="post-sub5">
+                                    <div class="sub5">text</div>
+                                </div>
+                                <div class="post-sub6">
+                                    <div class="sub6">want</div>
+                                </div>
                             </div>
                         </div>
                     </div>

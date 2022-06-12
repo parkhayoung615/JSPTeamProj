@@ -38,15 +38,15 @@
                                 </p>
                     </div>
                     <div class="product-option">
-                        <form action="./order.jsp " method="post">
+                        <form action="orderOK.jsp" method="post">
                             <div class="option-box">
                                 <div class="option taste">
                                     <div class="option-text">
                                         <p class="tit">맛 선택</p>
                                     </div>
                                     <div class="option-input">
-                                        <input class="item" type="image" src="./image/choco.jpg" alt="초코 맛" value="choco">
-                                        <input class="item" type="image" src="./image/tramisu.jpg" alt="티라미수 맛" value="tramisu">
+                                        <input name="taste" class="item" type="image" src="./image/choco.jpg" alt="초코 맛" value="choco" >
+                                        <input name="taste" class="item" type="image" src="./image/tramisu.jpg" alt="티라미수 맛" value="tramisu">
                                     </div>
                                 </div>
 
@@ -55,11 +55,11 @@
                                         <p class="tit">케이크 색상</p>
                                     </div>
                                     <div class="option-input">
-                                        <input class="item" type="image" src="./image/color1.jpg" alt="케이크 색상" value="white">
-                                        <input class="item" type="image" src="./image/color2.png" alt="케이크 색상" value="pink">
-                                        <input class="item" type="image" src="./image/color3.png" alt="케이크 색상" value="yellow">
-                                        <input class="item" type="image" src="./image/color4.png" alt="케이크 색상" value="mint">
-                                        <input class="item" type="image" src="./image/color5.png" alt="케이크 색상" value="blue">
+                                        <input name="color" class="item" type="image" src="./image/color1.jpg" alt="케이크 색상" value="white">
+                                        <input name="color" class="item" type="image" src="./image/color2.png" alt="케이크 색상" value="pink">
+                                        <input name="color" class="item" type="image" src="./image/color3.png" alt="케이크 색상" value="yellow">
+                                        <input name="color" class="item" type="image" src="./image/color4.png" alt="케이크 색상" value="mint">
+                                        <input name="color" class="item" type="image" src="./image/color5.png" alt="케이크 색상" value="blue">
                                     </div>
                                 </div>
                                 <div class="option">
@@ -67,7 +67,7 @@
                                         <p class="tit">케이크 문구</p>
                                     </div>
                                     <div class="option-input">
-                                        <input class="lettering" type="text" name="lettering" id="lettering" placeholder="한글, 특수문자 10자 / 영어, 숫자, 기호 20자까지 입력 가능합니다.">
+                                        <input name="text" class="lettering" type="text" name="lettering" id="lettering" placeholder="한글, 특수문자 10자 / 영어, 숫자, 기호 20자까지 입력 가능합니다.">
                                     </div>
                                 </div>
                                 <div class="option">
@@ -75,7 +75,7 @@
                                         <p class="tit">요청 사항</p>
                                     </div>
                                     <div class="option-input">
-                                        <textarea class="etc" name="etc" id="etc" placeholder="케이크, 판 문구수 추가 요청은 반영되지 않으며, 옵션에서 선택한 것과 다르게 요청 사항 기입시 옵션 선택 기준으로 제작됩니다."></textarea>
+                                        <textarea name="want" class="etc" name="etc" id="etc" placeholder="케이크, 판 문구수 추가 요청은 반영되지 않으며, 옵션에서 선택한 것과 다르게 요청 사항 기입시 옵션 선택 기준으로 제작됩니다."></textarea>
                                     </div>
                                 </div>
                                 

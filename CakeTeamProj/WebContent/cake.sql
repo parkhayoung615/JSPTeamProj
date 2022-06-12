@@ -1,8 +1,5 @@
 create table cake(
 cake varchar2(100) not null,
-name varchar2(100) not null,
-refund varchar2(100) not null,
-sell varchar2(100) not null,
 taste varchar2(100) not null,
 color varchar2(100) not null,
 text varchar2(200),
