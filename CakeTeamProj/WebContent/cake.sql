@@ -1,4 +1,5 @@
 create table cake(
+cake varchar2(100) not null,
 name varchar2(100) not null,
 refund varchar2(100) not null,
 sell varchar2(100) not null,
@@ -9,8 +10,8 @@ want varchar2(200)
 );
 
 
-insert into cake values('gain', '1', 'test', 'test1', 'red', 'test1', 'test1');
-insert into cake values('gain2', '2', 'test2', 'test2', 'pink', 'text2', 'text2');
+insert into cake values('cake', 'gain', '1', 'test', 'test1', 'red', 'test1', 'test1');
+insert into cake values('cake', 'gain2', '2', 'test2', 'test2', 'pink', 'text2', 'text2');
 
 
 select * from cake;

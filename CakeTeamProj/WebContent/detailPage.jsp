@@ -17,6 +17,7 @@
 
     <div id="main">
         <div id="cake-Product">
+        <form action="orderOK.jsp" method="POST">
             <div class="cake-Product-wrap">
                 <div class="cake-image">
                     <div class="main-img">
@@ -37,7 +38,7 @@
                                 </p>
                     </div>
                     <div class="product-option">
-                        <form action="" method="post">
+                        <form action="./order.jsp " method="post">
                             <div class="option-box">
                                 <div class="option taste">
                                     <div class="option-text">
@@ -77,6 +78,7 @@
                                         <textarea class="etc" name="etc" id="etc" placeholder="케이크, 판 문구수 추가 요청은 반영되지 않으며, 옵션에서 선택한 것과 다르게 요청 사항 기입시 옵션 선택 기준으로 제작됩니다."></textarea>
                                     </div>
                                 </div>
+                                
                                 <input type="submit" class="option-ok" value="옵션 선택 완료">
                             </div>
                         </form>
@@ -96,6 +98,7 @@
                     </p>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 
