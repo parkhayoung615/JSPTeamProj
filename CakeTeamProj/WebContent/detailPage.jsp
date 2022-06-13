@@ -17,7 +17,7 @@
 
    <div id="main">
         <div id="cake-Product">
-        <form action="orderOK.jsp" method="POST">
+        <form action="order.jsp" method="POST">
             <div class="cake-Product-wrap">
                 <div class="cake-image">
                     <div class="main-img">
@@ -73,7 +73,7 @@
                                         <p class="tit">케이크 문구</p>
                                     </div>
                                     <div class="option-input">
-                                        <input name="text" class="lettering" type="text" name="lettering" id="lettering" placeholder="한글, 특수문자 10자 / 영어, 숫자, 기호 20자까지 입력 가능합니다.">
+                                        <input name="text" class="lettering" type="text" name="text" id="lettering" placeholder="한글, 특수문자 10자 / 영어, 숫자, 기호 20자까지 입력 가능합니다.">
                                     </div>
                                 </div>
                                 <div class="option">

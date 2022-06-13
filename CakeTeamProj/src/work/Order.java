@@ -8,12 +8,12 @@ import util.JdbcUtil;
 
 public class Order {
 	// 주문
-			public int insertOrder(String cake, String taste,String color,String text,String want) {
+			public int insertOrder(String taste,String color,String text,String want) {
 				int n = 0;
 
 				Connection conn = null;
 				PreparedStatement pstmt = null;
-				String sql = "insert into cake values('cake',?,?,?,?)";
+				String sql = "insert into cake values(?,?,?,?)";
 
 				conn = JdbcUtil.getConnection();
 

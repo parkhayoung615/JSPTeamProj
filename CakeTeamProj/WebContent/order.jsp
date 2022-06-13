@@ -1,3 +1,4 @@
+<%@page import="work.Order"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,6 +15,28 @@
 </head>
 
 <body style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+<%
+	String taste, color, text, want;
+	Order order = new Order();
+	int n = 0;
+
+	//cake = request.getParameter("cake");
+	taste = request.getParameter("taste");
+	color = request.getParameter("color");
+	text = request.getParameter("text");
+	want = request.getParameter("want");
+/*
+	if (taste.isEmpty() && color.isEmpty()) {
+		out.println("<script>alert('필수선택 종목을 확인해주세요');</script>");
+		out.print("<script> history.back() </script>");
+
+	} else
+		*/
+		n = order.insertOrder(taste, color, text, want);
+
+	if (n > 0)
+		response.sendRedirect("index.jsp");
+	%>
     <header>
         <div id="header">
             <div class="header-wrap">
@@ -77,20 +100,17 @@
                                 <div class="post-main">
                                     <div class="sub">cake</div>
                                 </div>
-                                <div class="post-sub2">
-                                    <div class="sub2">cake</div>
-                                </div>
                                 <div class="post-sub3">
-                                    <div class="sub3">taste</div>
+                                    <div class="sub3"><%= request.getParameter("taste") %></div>
                                 </div>
                                 <div class="post-sub4">
-                                    <div class="sub4">color</div>
+                                    <div class="sub4"><%= request.getParameter("color") %></div>
                                 </div>
                                 <div class="post-sub5">
-                                    <div class="sub5">text</div>
+                                    <div class="sub5"><%= request.getParameter("text") %></div>
                                 </div>
                                 <div class="post-sub6">
-                                    <div class="sub6">want</div>
+                                    <div class="sub6"><%= request.getParameter("want") %></div>
                                 </div>
                             </div>
                         </div>
