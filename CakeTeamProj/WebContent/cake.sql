@@ -7,7 +7,6 @@ want varchar2(200)
 
 
 insert into cake values('gain', '1', 'test', 'test1', 'red', 'test1', 'test1');
-insert into cake values('gain2', '2', 'test2', 'test2', 'pink', 'text2', 'text2');
 
 
 select * from cake;
