@@ -44,7 +44,6 @@
 					<li class="signup"><a href="./signup.jsp">Sign up</a></li>
 					<li class="signin"><a href="./signin.jsp"><i
 							class="fa-solid fa-right-to-bracket"></i> Sign in</a></li>
-					<li><i class="fa-solid fa-magnifying-glass"></i></li>
 				</ul>
 				<%
 				}
