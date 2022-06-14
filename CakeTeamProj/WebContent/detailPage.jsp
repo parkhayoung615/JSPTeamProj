@@ -43,7 +43,7 @@
 	%>
                     <div class="main-img">
                         <div class="circle"></div>
-                        <img class="cake-img" src="./image/<%= rs.getString("img")%>">
+                        <img class="cake-img" src="./image/<%= rs.getString("img")%>" style="margin-bottom: 200px;">
                     </div>
                 </div>
                 
@@ -123,9 +123,8 @@
                     </div>
                     <p class="detail-text">
                         상품정보 주문 전 주의사항 <br>
-            생크림 정보 원산지 알레르기 표시 <br>
-            주문제작이니 배송시간 걸림 주문 들어간 후에는 환불 및 수정 불가능 신중히 선택
-            크림은 잘 녹으니 냉장 보관 필수
+            주문제작이니 배송시간 걸리며, 주문 들어간 후에는 환불 및 수정 불가능 신중히 선택해주시길 바랍니다.<br>
+            크림은 잘 녹으니 냉장 보관을 필수로 해주세요. :)
                     </p>
                 </div>
             </div>

@@ -1,12 +1,14 @@
 create table cake(
+id VARCHAR2(20) NOT NULL,
 taste varchar2(100) not null,
 color varchar2(100) not null,
 text varchar2(200),
-want varchar2(200)
+want varchar2(200),
+cake number
 );
 
 
-insert into cake values('gain', '1', 'test', 'test1', 'red', 'test1', 'test1');
+insert into cake values('testID1', 'choco', 'yellow', 'test', 'want', 1);
 
 
 select * from cake;
@@ -35,3 +37,7 @@ select * from cakeinfor;
 drop table cakeinfor;
 
 select id, cake, name, TO_CHAR(cell, '999,999,999,999,999') AS price, img from cakeinfor;
+
+SELECT * FROM cake l, cakeinfor c where l.id = '1';
+
+select c.name, u.want, u.text, u.color, u.cake from cakeinfor c, cake u where c.id = 1 AND c.id = u.cake;

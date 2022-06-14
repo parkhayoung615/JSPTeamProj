@@ -1,3 +1,8 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="util.JdbcUtil"%>
+<%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,6 +18,19 @@
 
 <body style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
    <%@ include file="./view/header.jsp"%>
+  <%
+    Connection conn = null;
+	PreparedStatement pstmt = null;
+	ResultSet rs = null;
+	String sql = "select id, name, phone, email, addr, m_addr, d_addr from login where id = ?";
+	boolean result = false;
+
+	conn = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
+	try {
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, id);
+		rs = pstmt.executeQuery();
+%>
 
     <div id="main">
         <div id="sidebar">
@@ -27,22 +45,32 @@
                     <li class="list-item"><a href="#"><i class="fa-solid fa-circle-check"></i> 현 주문 상황</a></li>
                 </ul>
             </div>
+<%						while (rs.next()) {
+	%>
             <div id="profile">
                 <div class="profile-wrap">
                     <div class="profile-img-box">
                         <img src="./image/ha2.png" alt="프로필 이미지" class="profile-img">
                     </div>
                     <div class="profile-txt">
-                        <span class="userid">parkhayoung615</span>
-                        <h2 class="name">박하영</h2>
-                        <span class="phone">01031236181</span>
-                        <span class="email">parkhayoung615@gmail.com</span>
-                        <span class="addr">경기도 성남시 분당구</span>
-                        <span class="addr m">불정로386번길 35</span>
+                        <span class="userid"><%= id %></span>
+                        <h2 class="name"><%= rs.getString("name") %></h2>
+                        <span class="phone"><%= rs.getString("phone") %></span>
+                        <span class="email"><%= rs.getString("email") %></span>
+                        <span class="addr"><%= rs.getString("addr") %> <%= rs.getString("m_addr") %></span>
+                        <span class="addr m"><%= rs.getString("d_addr") %></span>
                     </div>
                 </div>
             </div>
         </div>
+<%
+}
+						} catch (SQLException e) {
+							e.printStackTrace();
+						} finally {
+							JdbcUtil.close(conn, pstmt, rs);
+						}
+%>
         <div id="mypage">
             <div class="mypage-box">
                 <div class="mypage-main-wrap">

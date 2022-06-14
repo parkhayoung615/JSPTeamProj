@@ -95,20 +95,6 @@ class Termynal {
     }
 
    
-    _attributes(line) {
-        let attrs = '';
-        for (let prop in line) {
-            attrs += this.pfx;
-
-            if (prop === 'type') {
-                attrs += `="${line[prop]}" `
-            } else if (prop !== 'value') {
-                attrs += `-${prop}="${line[prop]}" `
-            }
-        }
-
-        return attrs;
-    }
 }
 
 if (document.currentScript.hasAttribute('data-termynal-container')) {
