@@ -139,32 +139,35 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" value="돌아가기">
                 </div>
 				
 			</form>
- <section>
-      <!-- ... -->
-      <span>총 주문금액</span>
-      <span>15,000 원</span>
-      <button id="payment-button">15,000원 결제하기</button>
-    </section>
-    <script>
-      var clientKey = 'test_ck_0Poxy1XQL8RKJLkGl7437nO5Wmlg'
-      var tossPayments = TossPayments(clientKey)
-      var button = document.getElementById('payment-button') // 결제하기 버튼
-      button.addEventListener('click', function () {
-        tossPayments.requestPayment('카드', {
-          amount: 15000,
-          orderId: 'Si6Iw4eaPJ9X6shxjgkfU',
-          orderName: '토스 티셔츠 외 2건',
-          customerName: '박토스',
-          successUrl: 'http://localhost:8090/index.jsp',
-          failUrl: 'http://localhost:8090/fail',
-        })
-      })
-    </script>
-
+		    <button id="payment-button">20,000원 결제하기</button>
+		    <script>
+		    // 테스트 키
+		      var clientKey = 'test_ck_0Poxy1XQL8RKJLkGl7437nO5Wmlg'
+		      // 토스 페이먼츠 연결키
+		      var tossPayments = TossPayments(clientKey)
+		      var button = document.getElementById('payment-button') // 결제하기 버튼
+		   	// 클릭했을 때 발생하는 이벤트
+		      button.addEventListener('click', function () {
+		    	 // 사용자 정보
+		        tossPayments.requestPayment('카드', {
+		        	// 가격
+		          amount: 20000,
+		          // 주문자 아이디
+		          orderId: 'Si6Iw4eaPJ9X6shxjgkfU',
+		          // 주문 내역
+		          orderName: '토스 티셔츠 외 2건',
+		          // 이름
+		          customerName: '박토스',
+		          // 성공하면 어디로 갈지(경로 설정)
+		          successUrl: 'http://localhost:8090/index.jsp',
+		          // 실패하면 어디로 갈지(경로 설정)
+		          failUrl: 'http://localhost:8090/fail',
+		        })
+		      })
+		    </script>
 		</div>
 	</div>
 </body>

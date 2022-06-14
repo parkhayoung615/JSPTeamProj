@@ -146,3 +146,10 @@
     justify-content: center;
     flex-direction: column;
 }
+
+#payment-button {
+	background-color: rgba(0, 0, 0, 0);
+	border-radius: 50px;
+	width: 200px;
+	height: 60px;
+}
