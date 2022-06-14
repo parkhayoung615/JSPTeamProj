@@ -40,4 +40,6 @@ select id, cake, name, TO_CHAR(cell, '999,999,999,999,999') AS price, img from c
 
 SELECT * FROM cake l, cakeinfor c where l.id = '1';
 
+select l.cake, l.name, l.cell, l.img from cakeinfor l, cake c where c.id = 'testID1' And c.cake = l.id;
+
 select c.name, u.want, u.text, u.color, u.cake from cakeinfor c, cake u where c.id = 1 AND c.id = u.cake;
