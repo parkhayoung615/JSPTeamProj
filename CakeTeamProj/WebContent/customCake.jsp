@@ -73,7 +73,7 @@
 							style="display: grid; grid-template-rows: repeat(2, 1fr); grid-template-columns: repeat(4, 1fr);">
 
 							<%						while (rs.next()) { %>
-							<a class="linke" href="./detailPage.jsp">
+							<a class="linke" href="./detailPage.jsp?id=<%= rs.getInt("id")%>">
 								<div class="all-product-item">
 									<div class="item-wrap">
 										<img src="./image/<%= rs.getString("img")%>" alt="판매 케이크 사진"

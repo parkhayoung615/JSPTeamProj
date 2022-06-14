@@ -1,3 +1,8 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="util.JdbcUtil"%>
+<%@page import="java.sql.SQLException"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,28 +18,40 @@
 
 <body style="-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
     <%@ include file="./view/header.jsp"%>
+	<%
+	id = request.getParameter("id");
+	
+	 Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from cakeinfor where id = ?";
+		boolean result = false;
 
+		conn = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+	%>
 
    <div id="main">
         <div id="cake-Product">
         <form action="order.jsp" method="POST">
             <div class="cake-Product-wrap">
                 <div class="cake-image">
+<%						while (rs.next()) {
+	%>
                     <div class="main-img">
                         <div class="circle"></div>
-                        <img class="cake-img" src="./image/cake3.png">
-                    </div>
-                    <div class="sub-img">
-                        <div class="sub-img-item"><img class="cake-item" src="./image/cake1.png" alt="케이크 사진"></div>
-                        <div class="sub-img-item"><img class="cake-item" src="./image/cake2.png" alt="케이크 사진"></div>
-                        <div class="sub-img-item"><img class="cake-item" src="./image/cake3.png" alt="케이크 사진"></div>
+                        <img class="cake-img" src="./image/<%= rs.getString("img")%>">
                     </div>
                 </div>
+                
                 <div class="text-box">
                     <div class="product-tit">
-                        <p class="main-tit">Happy Birth Day Chocolate Cake</p>
+                        <p class="main-tit"><%= rs.getString("name")%></p>
                             <p class="sub-tit">
-                                17,000 WON
+                                <%= rs.getString("cell")%> WON
                                 </p>
                     </div>
                     <div class="product-option">
@@ -84,11 +101,20 @@
                                         <textarea name="want" class="etc" name="etc" id="etc" placeholder="케이크, 판 문구수 추가 요청은 반영되지 않으며, 옵션에서 선택한 것과 다르게 요청 사항 기입시 옵션 선택 기준으로 제작됩니다."></textarea>
                                     </div>
                                 </div>
+                                <input type="hidden" name="id" value="<%= id%>">
                                 <input type="submit" class="option-ok" value="옵션 선택 완료">
                             </div>
                        
                     </div>
                 </div>
+                <%
+							}
+						} catch (SQLException e) {
+							e.printStackTrace();
+						} finally {
+							JdbcUtil.close(conn, pstmt, rs);
+						}
+%>
             </div>
             <div id="detail">
                 <div class="detail-wrap">

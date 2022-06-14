@@ -7,7 +7,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="UTF-8">
+<html lang="ko">
 
 <head>
 <meta charset="UTF-8">
@@ -25,7 +25,11 @@
 <body style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none">
 <%@ include file="./view/header.jsp"%>
 <%
-	String taste, color, text, want;
+	if(id == null) {
+		out.println("<script>alert('로그인을 진행 해주세요!');</script>");
+		out.print("<script> history.back() </script>");
+	}
+	String taste, color, text, want, id2;
 	Order order = new Order();
 	int n = 0;
 
@@ -34,7 +38,7 @@
 	color = request.getParameter("color");
 	text = request.getParameter("text");
 	want = request.getParameter("want");
-	
+	id2 = request.getParameter("id");
 /*
 	if (taste.isEmpty() && color.isEmpty()) {
 		out.println("<script>alert('필수선택 종목을 확인해주세요');</script>");
@@ -203,6 +207,7 @@
 		      })
 		    </script>
 		</div>
+	</div>
 	</div>
 	<%@ include file="./view/footer.jsp"%>
 </body>
