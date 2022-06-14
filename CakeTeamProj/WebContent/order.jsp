@@ -1,3 +1,8 @@
+<%@page import="java.sql.SQLException"%>
+<%@page import="util.JdbcUtil"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
 <%@page import="work.Order"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -18,6 +23,7 @@
 </head>
 
 <body style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none">
+<%@ include file="./view/header.jsp"%>
 <%
 	String taste, color, text, want;
 	Order order = new Order();
@@ -28,6 +34,7 @@
 	color = request.getParameter("color");
 	text = request.getParameter("text");
 	want = request.getParameter("want");
+	
 /*
 	if (taste.isEmpty() && color.isEmpty()) {
 		out.println("<script>alert('필수선택 종목을 확인해주세요');</script>");
@@ -39,13 +46,25 @@
 
 	//if (n > 0)
 	//	response.sendRedirect("index.jsp");
+	
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "SELECT phone, addr, m_addr, d_addr, name FROM login WHERE id=?";
+		boolean result = false;
+
+		conn = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+	
 	%>
-	 <%@ include file="./view/header.jsp"%>
 
 	<div id="main">
 		<div id="order">
-			<form action="orderOk.jsp" method="post">
-
 				<div class="order-wrap">
                     <div class="order-main-tit">
                         <div class="tit">주문서</div>
@@ -83,18 +102,22 @@
                                 <div class="tit">주문자 정보</div>
                             </div>
                             <hr>
+                            <%
+								while (rs.next()) {
+							%>
                             <div class="user-infor">
                                 <table class="user-table">
                                     <tr>
                                         <th class="user-fr">보내는 분</th>
-                                        <td class="user">name</td>
+                                        <td class="user"><%=id%></td>
                                     </tr>
                                     <tr>
                                         <th class="phone-fr">휴대폰</th>
-                                        <td class="phone">phone</td>
+                                        <td class="phone"><%= rs.getString("phone")%></td>
                                     </tr>
                                 </table>
                             </div>
+                            
                         </div>
                     </div>
                     
@@ -108,12 +131,21 @@
                                 <table class="post-table">
                                     <tr>
                                         <th class="post-fr">배송지</th>
-                                        <td class="post">경기도 성남시 분당구 불정로386번길 35</td>
+                                        <td class="post"><%= rs.getString("addr")%> <%= rs.getString("m_addr")%> <%= rs.getString("d_addr")%></td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                     </div>
+                    <%
+							}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JdbcUtil.close(conn, pstmt, rs);
+		}
+                    %>
 
                     <div class="order-pay">
                         <div class="pay-wrap">
@@ -140,10 +172,12 @@
                         </div>
                     </div>
                 </div>
-				
-			</form>
-		    <button id="payment-button">20,000원 결제하기</button>
-		    <script>
+                
+
+			<div class="payment">
+				<button id="payment-button">20,000원 결제하기</button>
+			</div>
+			<script>
 		    // 테스트 키
 		      var clientKey = 'test_ck_0Poxy1XQL8RKJLkGl7437nO5Wmlg'
 		      // 토스 페이먼츠 연결키
@@ -158,7 +192,7 @@
 		          // 주문자 아이디
 		          orderId: 'Si6Iw4eaPJ9X6shxjgkfU',
 		          // 주문 내역
-		          orderName: '토스 티셔츠 외 2건',
+		          orderName: 'Music is My Life...',
 		          // 이름
 		          customerName: '박토스',
 		          // 성공하면 어디로 갈지(경로 설정)
@@ -170,5 +204,6 @@
 		    </script>
 		</div>
 	</div>
+	<%@ include file="./view/footer.jsp"%>
 </body>
 </html>

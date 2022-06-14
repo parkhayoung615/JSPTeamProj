@@ -147,9 +147,16 @@
     flex-direction: column;
 }
 
+.payment {
+	width: 20%;
+	height: 200px
+}
+
 #payment-button {
-	background-color: rgba(0, 0, 0, 0);
+	background-color: #bb3636;
 	border-radius: 50px;
 	width: 200px;
-	height: 60px;
+	height: 50px;
+	border: none;
+	color: white;
 }
