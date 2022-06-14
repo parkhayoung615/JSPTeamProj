@@ -20,6 +20,11 @@
 	style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none">
 	<%@ include file="./view/header.jsp"%>
 	<%
+	if(id == null) {
+		out.println("<script>alert('로그인을 진행 해주세요!');</script>");
+		out.print("<script> location.href = 'index.jsp' </script>");
+	}
+	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
@@ -35,20 +40,8 @@
 
 	<div id="main">
 		<div id="sidebar">
-			<div id="sidebar-menu">
-				<div class="mypage-tit">
-					<h2 class="tit">Mypage</h2>
-				</div>
-				<ul class="sidebar-list">
-					<li class="list-item"><a href="#"><i
-							class="fa-solid fa-user"></i> 개인 정보 수정</a></li>
-					<li class="list-item"><a href="#"><i
-							class="fa-solid fa-box"></i> 배송지 관리</a></li>
-					<li class="list-item"><a href="#"><i
-							class="fa-solid fa-list"></i> 주문내역</a></li>
-					<li class="list-item"><a href="#"><i
-							class="fa-solid fa-circle-check"></i> 현 주문 상황</a></li>
-				</ul>
+			<div class="profile-tit">
+				<h1 class="tit">Profile</h1>
 			</div>
 			<%
 			while (rs.next()) {
@@ -99,21 +92,33 @@
 				<div class="mypage-box-wrap">
 					<div class="mypage-main">
 						<div class="mypage-main-wrap">
-							
+
 							<div class="mypage-main-section">
 								<div class="mypage-item order">
 									<div class="item-wrap">
 										<div class="item-tit">
 											주문 내역 &nbsp; <i class="fa-solid fa-angle-right"></i>
 										</div>
-										
+<%
+										Connection conn2 = null;
+										PreparedStatement pstmt2 = null;
+										ResultSet rs2 = null;
+										String sql2 = "select id, name, phone, email, addr, m_addr, d_addr from login where id = ?";
+										boolean result2 = false;
+									
+										conn2 = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
+										try {
+											pstmt2 = conn2.prepareStatement(sql);
+											pstmt2.setString(1, id);
+											rs2 = pstmt2.executeQuery();
+											while (rs2.next()) {
+%>
 										<ul class="item-list">
 											<li class="item-list-item"><img src="./image/cake6.png"
 												alt="케이크 사진" class="list-img">
 												<div class="item-list-txt">
 													<span class="list-point">Cake</span><br> <span
-														class="list-txt">tlqkf
-													</span>
+														class="list-txt">tlqkf </span>
 												</div></li>
 											<li class="item-list-item"><img src="./image/cake10.png"
 												alt="케이크 사진" class="list-img">
@@ -128,6 +133,15 @@
 														class="list-txt">Yummy Cake</span>
 												</div></li>
 										</ul>
+<%
+										}
+										} catch (SQLException e) {
+										e.printStackTrace();
+										} finally {
+										JdbcUtil.close(conn2, pstmt2, rs2);
+										}
+%>
+										
 									</div>
 								</div>
 								<div class="mypage-item order-now">
@@ -141,7 +155,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 				</div>

@@ -312,7 +312,6 @@
 	<%@ include file="./view/footer.jsp"%>
 
 
-    <!-- 팝업 영역 시작 -->
     <script type="text/javascript">
     $(document).ready(function () {
         $(".fa-brush").on('click', function (event) {
@@ -344,6 +343,7 @@
     });
 
     </script>
+    <!-- 팝업 영역 시작 -->
     <section id="modal1">
         <div class="popup-wrap">
             <div class="open-popup">
