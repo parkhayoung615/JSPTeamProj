@@ -112,7 +112,6 @@ html, body {
 }
 
 footer {
-    z-index: -1;
     font-family: VisualTitleMedium;
     background-color: #bb3636;
     width: 100%;

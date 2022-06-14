@@ -55,11 +55,9 @@
 /* 사이드바 시작 */
 
 #sidebar {
-    z-index: -1;
     width: 20%;
     position: fixed;
     left: 0;
-    box-shadow: 10px 40px 10px 5px rgb(245, 245, 245);
     height: 100%;
 }
 
@@ -75,6 +73,7 @@
 
 .sidebar-list-item a {
     position: relative;
+    z-index: 1;
     font-size: 16px;
 }
 
@@ -95,7 +94,9 @@
 }
 
 .sidebar-list {
-    margin: 50px;
+    margin: 50px 0 0 80px;
+    padding-left: 20px;
+    width: 80%;
 }
 
 

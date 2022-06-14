@@ -38,20 +38,26 @@
                 <div class="sidebar-wrap">
                     <ul class="sidebar-list">
                         <div class="sidebar-list-item tit">All Product</div>
-                        <div class="sidebar-list-item"><a href="./cake.jsp">Cake</a></div>
-                        <div class="sidebar-list-item"><a href="./customCake.jsp">Custom Cake</a></div>
-                        <div class="sidebar-list-item"><a href="./sameday.jsp">Same-Day Pickup</a></div>
+                        <li>
+                            <div class="sidebar-list-item"><a href="./cake.jsp">Cake</a></div>
+                        </li>
+                        <li>
+                            <div class="sidebar-list-item"><a href="./customCake.jsp">Custom Cake</a></div>
+                        </li>
+                        <li>
+                            <div class="sidebar-list-item"><a href="./sameday.jsp">Same-Day Pickup</a></div>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div id="product">
+            <div id="product" style="padding-bottom: 50px;">
                 <div class="product-wrap">
                     <div class="all-product-tit">
                         <h2 class="tit">All Product</h2>
                     </div>
                     <div class="all-product">
-						<div class="all-product-wrap">
-						<div class="all-product-row">
+						<div class="all-product-wrap" style="display: grid; grid-template-rows: repeat(2, 1fr); grid-template-columns: repeat(4, 1fr);">
+						
 <%						while (rs.next()) { %>
 							<a class="linke" href="./detailPage.jsp">
                                 <div class="all-product-item">
@@ -74,7 +80,6 @@
 							JdbcUtil.close(conn, pstmt, rs);
 						}
 %>
-						 </div>
 						 </div>
                     </div>
                 </div>
