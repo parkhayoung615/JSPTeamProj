@@ -134,16 +134,6 @@
 										
 									</div>
 								</div>
-								<div class="mypage-item order-now">
-									<div class="item-wrap">
-										<div class="item-tit">
-											주문 상황 &nbsp; <i class="fa-solid fa-angle-right"></i>
-										</div>
-										<div class="item-txt">
-											<div class="item-point">상품이 배송중입니다.</div>
-										</div>
-									</div>
-								</div>
 							</div>
 
 						</div>

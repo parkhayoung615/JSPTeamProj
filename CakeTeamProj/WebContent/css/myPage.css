@@ -150,17 +150,10 @@
 
 .order {
     width: 400px;
-    height: 400px;
+    height: 650px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px 5px rgb(247, 247, 247);
     margin-bottom: 40px;
-}
-
-.order-now {
-    width: 400px;
-    height: 120px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px 5px rgb(247, 247, 247);
 }
 
 .item-txt {
@@ -226,56 +219,3 @@
 }
 
 
-
-/* 팝업 */
-#popup1, #popup2 {
-    background-image: url('../image/memo.jpeg');
-      position: fixed;
-      display: none;
-      width: 800px;
-      height: 500px;
-      border-radius: 10px;
-      position: absolute;
-      top: 0%;
-      left: 50%;
-      transform: translate(-50%, 50%);
-      background-color: #fff;
-      z-index: 200000;
-  }
-  
-  .open-popup {
-      transition: all .4s ease;
-  }
-  
-  .pop-content {
-      display: flex;
-      flex-direction: column;
-      padding: 10px 10px;
-      margin-top: 3%;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  .backon {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, .6);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 20000;
-  }
-  
-  .pop-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .pop-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
