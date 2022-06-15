@@ -36,6 +36,9 @@ select * from cakeinfor;
 
 drop table cakeinfor;
 
+select c.taste as taste, c.color as color, c.text as text, b.img as img, b.name as name, b.cake as cake from cake c, cakeinfor b, login d where d.id = c.id AND c.id = 'testID1' AND b.id = c.cake;
+select * from cake c, cakeinfor b, login d where d.id = c.id AND c.id = 'testID1' AND b.id = c.cake;
+
 select id, cake, name, TO_CHAR(cell, '999,999,999,999,999') AS price, img from cakeinfor;
 
 SELECT * FROM cake l, cakeinfor c where l.id = '1';

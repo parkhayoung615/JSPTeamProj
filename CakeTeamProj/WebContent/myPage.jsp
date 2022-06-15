@@ -103,37 +103,26 @@
 										Connection conn2 = null;
 										PreparedStatement pstmt2 = null;
 										ResultSet rs2 = null;
-										String sql2 = "select id, name, phone, email, addr, m_addr, d_addr from login where id = ?";
+										String sql2 = "select c.taste as taste, c.color as color, b.img as img, b.name as name, b.cake as cake from cake c, cakeinfor b, login d where d.id = c.id AND c.id = ? AND b.id = c.cake";
 										boolean result2 = false;
 									
 										conn2 = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
 										try {
-											pstmt2 = conn2.prepareStatement(sql);
+											pstmt2 = conn2.prepareStatement(sql2);
 											pstmt2.setString(1, id);
 											rs2 = pstmt2.executeQuery();
-											while (rs2.next()) {
 %>
 										<ul class="item-list">
-											<li class="item-list-item"><img src="./image/cake6.png"
-												alt="케이크 사진" class="list-img">
+										<%
+								while (rs2.next()) {
+							%>
+											<li class="item-list-item"><img src="./image/<%= rs2.getString("img")%>" alt="케이크 사진" class="list-img">
 												<div class="item-list-txt">
-													<span class="list-point">Cake</span><br> <span
-														class="list-txt">tlqkf </span>
-												</div></li>
-											<li class="item-list-item"><img src="./image/cake10.png"
-												alt="케이크 사진" class="list-img">
-												<div class="item-list-txt">
-													<span class="list-point">Custom Cake</span><br> <span
-														class="list-txt">My Life is Cake...</span>
-												</div></li>
-											<li class="item-list-item"><img src="./image/cake7.png"
-												alt="케이크 사진" class="list-img">
-												<div class="item-list-txt">
-													<span class="list-point">Cake</span><br> <span
-														class="list-txt">Yummy Cake</span>
-												</div></li>
-										</ul>
-<%
+													<span class="list-point"><%= rs2.getString("cake")%> / <%= rs2.getString("taste")%> / <%= rs2.getString("color")%></span><br> <span
+														class="list-txt"><%= rs2.getString("name")%></span>
+												</div>
+											</li>
+												<%
 										}
 										} catch (SQLException e) {
 										e.printStackTrace();
@@ -141,6 +130,7 @@
 										JdbcUtil.close(conn2, pstmt2, rs2);
 										}
 %>
+										</ul>
 										
 									</div>
 								</div>
