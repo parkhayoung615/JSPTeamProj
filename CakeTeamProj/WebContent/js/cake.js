@@ -1,9 +1,9 @@
 
 'use strict';
 
-/** Generate a terminal widget. */
+/** 터미널 생성 */
 class Termynal {
-    
+//    컨테이터 생성
     constructor(container = '#termynal', options = {}) {
         this.container = (typeof container === 'string') ? document.querySelector(container) : container;
         this.pfx = `data-${options.prefix || 'ty'}`;
@@ -15,10 +15,12 @@ class Termynal {
             || parseFloat(this.container.getAttribute(`${this.pfx}-lineDelay`)) || 1500;
         this.progressLength = options.progressLength
             || parseFloat(this.container.getAttribute(`${this.pfx}-progressLength`)) || 40;
+//        커서 모양
         this.progressChar = options.progressChar
             || this.container.getAttribute(`${this.pfx}-progressChar`) || '█';
 		this.progressPercent = options.progressPercent
             || parseFloat(this.container.getAttribute(`${this.pfx}-progressPercent`)) || 100;
+//		커서 설정
         this.cursor = options.cursor
             || this.container.getAttribute(`${this.pfx}-cursor`) || '▋';
         this.lineData = this.lineDataToElements(options.lineData || []);
@@ -40,10 +42,12 @@ class Termynal {
         this.start();
     }
 
+//    이벤트 시작하기
     async start() {
         await this._wait(this.startDelay);
-
+//      글자수 판단 후 for문으로 라인 늘리기
         for (let line of this.lines) {
+//        	변수 설정 (타입, 딜레이)
             const type = line.getAttribute(this.pfx);
             const delay = line.getAttribute(`${this.pfx}-delay`) || this.lineDelay;
 
