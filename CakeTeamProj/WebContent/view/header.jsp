@@ -6,9 +6,9 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="./css/headerCss.css">
+<!-- 제이쿼리 라이브러리 (js를 조금 더 간단하게 사용할 수 있도록 해주는 라이브러리) -->
 <script src="./js/jquery-3.6.0.min.js"></script>
-<!-- 파비콘 설정 -->
-<link rel="icon" href="./image/ha2.png">
+<!-- 아이콘 라이브러리 -->
 <link rel="stylesheet" href="./css/fontawesome-free-6.1.1-web/css/all.min.css">
 </head>
 <body>
