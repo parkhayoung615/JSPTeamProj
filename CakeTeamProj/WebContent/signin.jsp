@@ -26,7 +26,7 @@
                 <div id="login-text">
                     <div class="login-text-wrap">
                         <div class="log-tit">Sign In to<br>Magic Cake</div>
-                        <div class="log-sub-tit">아직도 회원이 아닌가요? <a class="sign-txt" href="./Signup.html">Sign up</a>
+                        <div class="log-sub-tit">아직도 회원이 아닌가요? <a class="sign-txt" href="./signup.jsp">Sign up</a>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,6 @@
                             <div class="user-form">
                                 <input type="text" name="id" placeholder="ID">
                                 <input type="password" name="pwd" placeholder="PASSWORD">
-                                <a class="forget" href="./search.html">아이디/비밀번호</a>
                             </div>
                             <input class="sign-btn" type="submit" value="Sign in">
                             

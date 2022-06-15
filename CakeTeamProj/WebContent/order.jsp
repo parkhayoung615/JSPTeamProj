@@ -79,7 +79,9 @@
                         		PreparedStatement pstmt1 = null;
                         		ResultSet rs1 = null;
                         		cake = Integer.parseInt(id2);
+                        		
                         		n = order.insertOrder(id, taste, color, text, want, cake);
+                        		
                         		String sql1 = "select * from cakeinfor where id = ?";
                         		boolean result1 = false;
 

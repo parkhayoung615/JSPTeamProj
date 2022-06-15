@@ -22,21 +22,6 @@
 	String orderId = request.getParameter("orderId");
 	String amount = request.getParameter("amount");
 
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		String sql = "select * from cake u where id = ?";
-		//String sql = "select c.name, u.want, u.text, u.color, u.cake from cakeinfor c, cake u where c.id = 1 AND c.id = u.cake;";
-		boolean result = false;
-
-		conn = JdbcUtil.getConnection(); // JDBC 드라이버 메모리 로딩, DB 연결
-//		try {
-//			pstmt = conn.prepareStatement(sql);
-//			pstmt.setString(1, id);
-//			//pstmt.setInt(1, id2);
-//			rs = pstmt.executeQuery();
-			
-	
 	%>
 
 	<div id="main">
@@ -54,21 +39,7 @@
 							d="M14.1 27.2l7.1 7.2 16.7-16.8" />
                     </svg>
 				</div>
-				<%						//while (rs.next()) {
-	%>
 				<table class="orderOk-table">
-					<tr class="order-infor">
-						<th class="img one2"><img src="./image/cake6.png" alt="주문상품"
-							class="content-img"></th>
-						<td class="name two2">
-							<div class="content-inf">
-								Music is my Life... <span class="text">(문구 : 하영아 생일 축하해
-									!!)</span>
-							</div>
-							<div class="content-inf-sub">초코맛 / 흰색 / 케이크 크림에 빨간색이 꼭
-								들어갔으면 좋겠어요!</div>
-						</td>
-					</tr>
 					<tr class="orderId">
 						<th class="orderId-fr one2">주문번호</th>
 						<td class="orderId-ba two2"><%= orderId %></td>
@@ -79,14 +50,6 @@
 					</tr>
 
 				</table>
-<%
-//							}
-//						} catch (SQLException e) {
-//							e.printStackTrace();
-//						} finally {
-//							JdbcUtil.close(conn, pstmt, rs);
-//						}
-%>
 			</div>
 		</div>
 	</div>

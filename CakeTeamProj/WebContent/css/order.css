@@ -132,13 +132,13 @@
 
 .orderOk-table th {
     text-align: center;
-    width: 200px;
+    width: 250px;
     height: 50px;
 }
 
 .orderOk-table td {
     text-align: left;
-    width: 700px;
+    width: 600px;
 }
 
 .order-name-ba, .orderId-ba, .amount-ba {
