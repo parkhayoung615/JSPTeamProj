@@ -313,29 +313,32 @@
 
 
     <script type="text/javascript">
+    // 제이쿼리로 모달창 이벤트 실행
     $(document).ready(function () {
+    	// 눌렀을 떄 이벤트
         $(".fa-brush").on('click', function (event) {
             $("#popup-design").show();   //팝업 오픈
             $("body").append('<div class="backon"></div>'); //뒷배경 생성
             $("body").addClass("modal-open");
         });
-
+     // 눌렀을 떄 이벤트
         $(".fa-computer").on('click', function (event) {
             $("#popup-devel").show();   //팝업 오픈
             $("body").append('<div class="backon"></div>'); //뒷배경 생성
             $("body").addClass("modal-open");
         });
-
+     // 눌렀을 떄 이벤트
         $("body").on("click", function (event) {
             if (event.target.className == 'backon') {
-                $("#popup-devel").hide(); // close버튼이거나 뒷배경 클릭시 팝업 삭제
+                $("#popup-devel").hide(); // 뒷배경 클릭시 팝업 삭제
                 $(".backon").hide();
                 $("body").removeClass("modal-open")
             }
         });
+     // 눌렀을 떄 이벤트
         $("body").on("click", function (event) {
             if (event.target.className == 'backon') {
-                $("#popup-design").hide(); // close버튼이거나 뒷배경 클릭시 팝업 삭제
+                $("#popup-design").hide(); // 뒷배경 클릭시 팝업 삭제
                 $(".backon").hide();
                 $("body").removeClass("modal-open")
             }
