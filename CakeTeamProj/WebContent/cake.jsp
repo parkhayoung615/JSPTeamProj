@@ -57,16 +57,13 @@
 						<div class="category-sidebar-list-item">
 							<a href="./customCake.jsp">Custom Cake</a>
 						</div>
-						<div class="category-sidebar-list-item">
-							<a href="./sameday.jsp">Same-Day Pickup</a>
-						</div>
 					</ul>
 				</div>
 			</div>
 			<div id="product" style="padding-bottom: 50px;">
 				<div class="product-wrap">
 					<div class="all-product-tit">
-						<h2 class="tit">All Product</h2>
+						<h2 class="tit">Cake</h2>
 					</div>
 					<div class="all-product">
 						<div class="all-product-wrap"

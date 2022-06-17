@@ -22,8 +22,6 @@
 					<li class="list-item"><a href="./cake.jsp">Cake</a></li>
 					<li class="list-item"><a href="./customCake.jsp">Custom
 							Cake</a></li>
-					<li class="list-item"><a href="./sameday.jsp">Same-day
-							Pickup</a></li>
 					<li class="list-item"><a href="./aboutUs.jsp">About Us</a></li>
 				</ul>
 

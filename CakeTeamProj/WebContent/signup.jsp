@@ -46,7 +46,6 @@
 								<th class="thead">아이디<span class="star">*</span></th>
 								<td class="tinput"><input type="text" name="userid"
 									placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
-									<button class="ok-btn" name="ok-btn">중복 확인</button></td>
 							</tr>
 							<!-- 비밀번호 영역 -->
 							<tr class="userPwd">
@@ -70,7 +69,6 @@
 								<th class="thead">이메일<span class="star">*</span></th>
 								<td class="tinput"><input type="email" name="userEmail"
 									placeholder="예: magic@cake.com">
-									<button class="ok-btn">중복 확인</button></td>
 							</tr>
 							<!-- 휴대폰 영역 -->
 							<tr class="userPhone">

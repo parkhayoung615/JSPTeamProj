@@ -44,9 +44,6 @@
                         <li>
                             <div class="sidebar-list-item"><a href="./customCake.jsp">Custom Cake</a></div>
                         </li>
-                        <li>
-                            <div class="sidebar-list-item"><a href="./sameday.jsp">Same-Day Pickup</a></div>
-                        </li>
                     </ul>
                 </div>
             </div>
